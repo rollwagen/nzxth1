@@ -5,22 +5,19 @@ function print_info {
 }  
 
 print_info "Cloning github based tools..."
-while IFS= read -r line
-do
-  git clone "$line"
-done < "urls_git.txt"
+git clone https://github.com/corpnewt/GenSMBIOS
+#git clone https://github.com/headkaze/Hackintool
+git clone https://github.com/corpnewt/MountEFI
+git clone https://github.com/corpnewt/ProperTree
+git clone https://github.com/corpnewt/gibMacOS
 
-print_info "Downloading tools..."
-while IFS= read -r line
-do
-  curl -OL "$line"
-done < "urls_download.txt"
 
-print_info "Unzipping MaciASL..."
+print_info "Downloading and unzipping MaciASL tool..."
+curl -OL https://github.com/acidanthera/MaciASL/releases/download/1.5.7/MaciASL-1.5.7-RELEASE.zip
 unzip -d MaciASL MaciASL-*.zip
 rm MaciASL-*.zip
 
-print_info "Installing hackingtool via 'brew'..."
+print_info "Installing Hackingtool via 'brew'..."
 brew cask install hackintool
 
-# rm -rf GenSMBIOS/ Hackintool/ MountEFI/ ProperTree/ gibMacOS/ MaciASL*
+# rm -rf GenSMBIOS/  MountEFI/ ProperTree/ gibMacOS/ MaciASL*

@@ -1,5 +1,0 @@
-https://github.com/corpnewt/GenSMBIOS
-https://github.com/headkaze/Hackintool
-https://github.com/corpnewt/MountEFI
-https://github.com/corpnewt/ProperTree
-https://github.com/corpnewt/gibMacOS
