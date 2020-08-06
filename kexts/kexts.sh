@@ -32,3 +32,14 @@ curl -OL "$download_url"
 unzip -d lilu-$version Lilu*.zip
 rm Lilu*.zip
 
+print_info "Downloading and unzipping latest 'VirtualSMC' kext release..."
+download_url=`curl_url https://api.github.com/repos/acidanthera/VirtualSMC/releases/latest`
+version=`echo $download_url | awk -F\/ '{print $8}'`
+print_info "VERSION: $version"
+curl -OL "$download_url"
+unzip -d lilu-$version VirtualSMC*.zip
+rm VirtualSMC*.zip
+
+
+
+# rm -rf intelmausi-* lilu-* radeonboost-* virtualsmc-* whatevergreen-*
