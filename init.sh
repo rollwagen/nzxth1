@@ -12,11 +12,13 @@ if ! [ -x "$(command -v git)" ]; then
   echo 'Error: git is not installed.' >&2; exit 1;
 fi
 
-if ! [ -x "$(command -v jq)" ]; then
-  echo 'Error: jq is not installed.' >&2
-  exit 1
+if ! [ -x "$(command -v brew)" ]; then
+  echo 'Error: brew is not installed.' >&2; exit 1;
 fi
 
+if ! [ -x "$(command -v jq)" ]; then
+  echo 'Error: jq is not installed.' >&2; exit 1;
+fi
 
 
 #
