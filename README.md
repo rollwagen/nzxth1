@@ -11,7 +11,9 @@ OpenCore build for NZXT H1.
 - GPU: Sapphire Radeon RX 570 (8GB) 
 - SSD: WD Black SN750 NAND, 500GB, M.2 2280
 
+:alarm_clock: **Work in progress.**
+
 # Credits / Links
-- [SchockLord's build](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
+- [SchmockLord's build](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
 - [Dortania](https://github.com/dortania) _the_ OpenCore Desktop Guide
 - [OpenCore project](https://github.com/OpenCorePkg) 
