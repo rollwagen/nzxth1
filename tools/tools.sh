@@ -18,6 +18,9 @@ git clone https://github.com/corpnewt/ProperTree
 print_info "gibMacOS..."
 git clone https://github.com/corpnewt/gibMacOS
 
+print_info "OCConfigCompare..."
+https://github.com/corpnewt/OCConfigCompare
+
 
 print_info "Downloading and unzipping MaciASL tool..."
 curl -OL https://github.com/acidanthera/MaciASL/releases/download/1.5.7/MaciASL-1.5.7-RELEASE.zip
@@ -32,4 +35,4 @@ brew cask install hackintool
 # https://mac.filehorse.com/download-ioregistryexplorer/
 # https://mac.filehorse.com/download-ioregistryexplorer/
 
-# rm -rf GenSMBIOS/  MountEFI/ ProperTree/ gibMacOS/ MaciASL*
+# rm -rf GenSMBIOS/  MountEFI/ ProperTree/ gibMacOS/ MaciASL* OCConfigCompare*
