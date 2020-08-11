@@ -19,7 +19,7 @@ print_info "gibMacOS..."
 git clone https://github.com/corpnewt/gibMacOS
 
 print_info "OCConfigCompare..."
-https://github.com/corpnewt/OCConfigCompare
+git clone https://github.com/corpnewt/OCConfigCompare
 
 
 print_info "Downloading and unzipping MaciASL tool..."
