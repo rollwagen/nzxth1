@@ -4,17 +4,25 @@ print_info () {
 	echo "$(tput bold)$1$(tput sgr 0)"
 }
 
+print_info "INFO: consider setting GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET for authenticated api requests (see https://developer.github.com/v3/#rate-limiting)"
 curl_url () {
 	if [[ -z "${GITHUB_CLIENT_ID}" ]]; then
-		# NOT defined
-		echo `curl -s $1 | grep "browser_download_url" | grep "RELEASE" | cut -d : -f 2,3 | tr -d \ \"`
+		echo `curl -s $1  | jq '.assets[] | select(.browser_download_url | contains("RELEASE")) | .browser_download_url' | tr -d \ \" `
 	else
-		# defined - for authenticated requests, see https://developer.github.com/v3/#rate-limiting
-		echo `curl -u $GITHUB_CLIENT_ID:$GITHUB_CLIENT_SECRET -s $1 | grep "browser_download_url" | grep "RELEASE" | cut -d : -f 2,3 | tr -d \ \"`
+		echo `curl -u $GITHUB_CLIENT_ID:$GITHUB_CLIENT_SECRET -s $1  | jq '.assets[] | select(.browser_download_url |contains("RELEASE")) | .browser_download_url' | tr -d \ \"`
 	fi
 
 }
 
+
+print_info "Downloading and unzipping latest 'WhateverGreen' kext release..."
+download_url=`curl_url https://api.github.com/repos/acidanthera/whatevergreen/releases/latest`
+version=`echo $download_url | awk -F\/ '{print $8}'`
+print_info "Download URL: $download_url"
+print_info "VERSION: $version"
+curl -OL "$download_url"
+unzip -d whatevergreen-$version Whatever*.zip
+rm Whatever*.zip
 
 print_info "Downloading and unzipping latest 'IntelMausi' kext release..."
 download_url=`curl_url https://api.github.com/repos/acidanthera/IntelMausi/releases/latest`
@@ -37,7 +45,7 @@ download_url=`curl_url https://api.github.com/repos/acidanthera/VirtualSMC/relea
 version=`echo $download_url | awk -F\/ '{print $8}'`
 print_info "VERSION: $version"
 curl -OL "$download_url"
-unzip -d lilu-$version VirtualSMC*.zip
+unzip -d virtualsmc-$version VirtualSMC*.zip
 rm VirtualSMC*.zip
 
 
@@ -49,4 +57,4 @@ git clone https://github.com/OpenIntelWireless/itlwm.git
 
 
 
-# rm -rf intelmausi-* lilu-* radeonboost-* virtualsmc-* whatevergreen-* itlwm*
+# rm -rf intelmausi-* lilu-* virtualsmc-* whatevergreen-* itlwm*
