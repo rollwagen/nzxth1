@@ -41,5 +41,12 @@ unzip -d lilu-$version VirtualSMC*.zip
 rm VirtualSMC*.zip
 
 
+### additional optional kexts ###
 
-# rm -rf intelmausi-* lilu-* radeonboost-* virtualsmc-* whatevergreen-*
+print_info "Getting 'itlwm' kext repository from github..."
+git clone https://github.com/OpenIntelWireless/itlwm.git
+# xcodebuild -project itlwm.xcodeproj -target itlwmx -configuration Release  -sdk macosx10.15
+
+
+
+# rm -rf intelmausi-* lilu-* radeonboost-* virtualsmc-* whatevergreen-* itlwm*
