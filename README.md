@@ -1,6 +1,8 @@
 # NZXT H1
 OpenCore build for NZXT H1.
 
+:alarm_clock: **Work in progress.** :wrench:
+
 # Hardware
 - Case: NZXT H1 (black)
 - CPU: Intel i9-10900T (LGA 1200)
@@ -11,7 +13,6 @@ OpenCore build for NZXT H1.
 - GPU: Sapphire Radeon RX 570 (8GB) 
 - SSD: WD Black SN750 NAND, 500GB, M.2 2280
 
-:alarm_clock: **Work in progress.**
 
 # Credits / Links
 - [SchmockLord's build](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
