@@ -16,10 +16,14 @@ TOOLSDIR=$OCVERSION/EFI/OC/Tools
 # OpenCore kext directory
 KEXTSDIR=$OCVERSION/EFI/OC/Kexts
 
+# OpenCore kext directory
+ACPISDIR=$OCVERSION/EFI/OC/ACPI
+
 print_info "OpenCore version: $OCVERSION"
 print_info "Drivers directory: $DRIVERSDIR"
 print_info "Tools directory: $TOOLSDIR"
 print_info "Kext directory: $KEXTSDIR"
+print_info "ACPI directory: $ACPISDIR"
 echo
 
 #
@@ -63,7 +67,7 @@ echo
 # 'Remove from drivers' as per https://dortania.github.io/OpenCore-Install-Guide/installer-guide/opencore-efi.html
 #
 
-print_info "Removing all unnecessary tools...(keeping OpenShell.efi and CleanNvram.efi)..."
+print_info "Removing all unnecessary tools...(keeping OpenShell.efi)..."
 
 rm -v $TOOLSDIR/BootKicker.efi
 rm -v $TOOLSDIR/ChipTune.efi
@@ -75,6 +79,7 @@ rm -v $TOOLSDIR/OpenControl.efi
 rm -v $TOOLSDIR/ResetSystem.efi
 rm -v $TOOLSDIR/RtcRw.efi
 rm -v $TOOLSDIR/VerifyMsrE2.efi
+rm -v $TOOLSDIR/CleanNvram.efi
 
 print_info "Removing all unnecessary tools...DONE."
 echo
@@ -113,8 +118,19 @@ WHATEVERGREEN_DEST=$KEXTSDIR/WhateverGreen.kext
 echo
 
 
+#
+# SSDTs as per https://dortania.github.io/Getting-Started-With-ACPI/ssdt-platform.html#desktop
+#
+
+print_info "Adding SSDTs (.aml files) to ACPI dir..."
+SSDT_SRC=0.5.9/ACPI
+cp -v $SSDT_SRC/*.aml $ACPISDIR/
+echo
 
 
-
-
+#
+# config.plist
+# 
+print_info "Adding SSDTs (.aml files) to ACPI dir..."
+cp -v releases/OpenCore-$OCVERSION/Docs/Sample.plist $OCVERSION/EFI/OC/config.plist
 
