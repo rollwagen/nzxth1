@@ -1,0 +1,6 @@
+intelbluetooth-1.1.2
+intelmausi-1.0.3
+lilu-1.4.6
+radeonboost-1.6
+virtualsmc-1.1.5
+whatevergreen-1.4.1
