@@ -18,3 +18,4 @@ OpenCore build for NZXT H1.
 - [SchmockLord's build](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
 - [Dortania](https://github.com/dortania) _the_ OpenCore Desktop Guide
 - [OpenCore project](https://github.com/OpenCorePkg) 
+- [Gigabyte z490i ITX / 10900K / Opencore 0.5.9 / Catalina 15.5.5 / Ncase M1](https://www.tonymacx86.com/threads/gigabyte-z490i-itx-10900k-opencore-0-5-9-catalina-15-5-5-ncase-m1.299195/)
