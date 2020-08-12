@@ -35,7 +35,7 @@ version=`echo $download_url | awk -F\/ '{print $8}'`
 print_info "Download URL: $download_url"
 print_info "VERSION: $version"
 curl -OL "$download_url"
-unzip -d whatevergreen-$version Whatever*.zip
+unzip -q -d whatevergreen-$version Whatever*.zip
 rm Whatever*.zip
 
 print_info "Downloading and unzipping latest 'IntelMausi' kext release..."
@@ -43,7 +43,7 @@ download_url=`curl_url https://api.github.com/repos/acidanthera/IntelMausi/relea
 version=`echo $download_url | awk -F\/ '{print $8}'`
 print_info "VERSION: $version"
 curl -OL "$download_url"
-unzip -d intelmausi-$version IntelMausi*.zip
+unzip -q -d intelmausi-$version IntelMausi*.zip
 rm IntelMausi*.zip
 
 print_info "Downloading and unzipping latest 'Lilu' kext release..."
@@ -51,7 +51,7 @@ download_url=`curl_url https://api.github.com/repos/acidanthera/Lilu/releases/la
 version=`echo $download_url | awk -F\/ '{print $8}'`
 print_info "VERSION: $version"
 curl -OL "$download_url"
-unzip -d lilu-$version Lilu*.zip
+unzip -q -d lilu-$version Lilu*.zip
 rm Lilu*.zip
 
 print_info "Downloading and unzipping latest 'VirtualSMC' kext release..."
@@ -59,7 +59,7 @@ download_url=`curl_url https://api.github.com/repos/acidanthera/VirtualSMC/relea
 version=`echo $download_url | awk -F\/ '{print $8}'`
 print_info "VERSION: $version"
 curl -OL "$download_url"
-unzip -d virtualsmc-$version VirtualSMC*.zip
+unzip -q -d virtualsmc-$version VirtualSMC*.zip
 rm VirtualSMC*.zip
 
 
