@@ -13,9 +13,13 @@ DRIVERSDIR=$OCVERSION/EFI/OC/Drivers
 # OpenCore drivers directory
 TOOLSDIR=$OCVERSION/EFI/OC/Tools
 
+# OpenCore kext directory
+KEXTSDIR=$OCVERSION/EFI/OC/Kexts
+
 print_info "OpenCore version: $OCVERSION"
 print_info "Drivers directory: $DRIVERSDIR"
 print_info "Tools directory: $TOOLSDIR"
+print_info "Kext directory: $KEXTSDIR"
 echo
 
 #
@@ -80,8 +84,36 @@ echo
 # Adding firmware drivers as per https://dortania.github.io/OpenCore-Install-Guide/ktext.html#firmware-drivers
 #
 
-print_info "Adding 'HfsPlus.efi' (Needed for seeing HFS volumes)..."
-curl -s -L https://github.com/acidanthera/OcBinaryData/raw/master/Drivers/HfsPlus.efi -o $DRIVERSDIR/HfsPlus.efi
+print_info "Adding firmware driver 'HfsPlus.efi' (Needed for seeing HFS volumes)..."
+HFSPLUS_DEST=$DRIVERSDIR/HfsPlus.efi
+[[ ! -f $HFSPLUS_DEST ]] && curl -L https://github.com/acidanthera/OcBinaryData/raw/master/Drivers/HfsPlus.efi -o $DRIVERSDIR/HfsPlus.efi
+echo
+
+
+#
+# Adding needed kexts as per https://dortania.github.io/OpenCore-Install-Guide/ktext.html#kexts
+# 
+
+print_info "Adding kext 'VirtualSMC' (Emulates the SMC chip found on real macs, without this macOS will not boot)..."
+VIRTUALSMC_SRC=../kexts/virtualsmc-*/Kexts/VirtualSMC.kext
+VIRTUALSMC_DEST=$KEXTSDIR/VirtualSMC.kext
+[[ ! -d $VIRTUALSMC_DEST ]] && cp -R $VIRTUALSMC_SRC $KEXTSDIR/
+echo
+
+print_info "Adding kext 'Lilu' (A kext to patch many processes, required for AppleALC, WhateverGreen, VirtualSMC and many other kexts.)..."
+LILU_SRC=../kexts/lilu-*/Lilu.kext
+LILU_DEST=$KEXTSDIR/Lilu.kext
+[[ ! -d $LILU_DEST ]] && cp -R $LILU_SRC $KEXTSDIR/
+echo
+
+print_info "Adding kext 'WhateverGreen' (Used for graphics patching DRM, boardID, framebuffer fixes, etc, all GPUs benefit from this kext.)..."
+WHATEVERGREEN_SRC=../kexts/whatevergreen-*/WhateverGreen.kext
+WHATEVERGREEN_DEST=$KEXTSDIR/WhateverGreen.kext
+[[ ! -d $WHATEVERGREEN_DEST ]] && cp -R $WHATEVERGREEN_SRC $KEXTSDIR/
+echo
+
+
+
 
 
 
