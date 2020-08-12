@@ -17,14 +17,14 @@ curl_url () {
 		print_info "INFO: consider setting GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET for authenticated api requests (see https://developer.github.com/v3/#rate-limiting)"
 		echo `curl -s $1  | jq '.assets[] | select(.browser_download_url | contains("RELEASE")) | .browser_download_url' | tr -d \ \" `
 	else
-		echo `curl -u $GITHUB_CLIENT_ID:$GITHUB_CLIENT_SECRET -s $1  | jq '.assets[] | select(.browser_download_url |contains("RELEASE")) | .browser_download_url' | tr -d \ \"`
+		echo `curl -u $GITHUB_CLIENT_ID:$GITHUB_CLIENT_SECRET -s $1  | jq '.assets[] | select(.browser_download_url | contains("RELEASE")) | .browser_download_url' | tr -d \ \"`
 	fi
 
 }
 
 if [ "$ACTION" = "CLEANUP" ]; then
 	print_info "Cleaning up (deleting all downloaded content)."
-	rm -rf intelmausi-* lilu-* virtualsmc-* whatevergreen-* itlwm*
+	rm -rf intelmausi-* lilu-* virtualsmc-* whatevergreen-* itlwm* intelbluetooth*
 	exit
 fi
 
@@ -65,9 +65,19 @@ rm VirtualSMC*.zip
 
 ### additional optional kexts ###
 
-print_info "Getting 'itlwm' kext repository from github..."
+print_info "Getting 'itlwm' (Intel Wireless support) kext repository from github..."
 git clone https://github.com/OpenIntelWireless/itlwm.git
+# sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 # xcodebuild -project itlwm.xcodeproj -target itlwmx -configuration Release  -sdk macosx10.15
+
+print_info "Downloading and unzipping latest 'OpenIntelWireless/IntelBluetoothFirmware' kext release..."
+download_url=`curl -s https://api.github.com/repos/OpenIntelWireless/IntelBluetoothFirmware/releases/latest | jq '.assets[] | select(.browser_download_url) | .browser_download_url' | tr -d \ \"`
+version=`echo $download_url | awk -F\/ '{print $8}'`
+print_info "Download URL: $download_url"
+print_info "VERSION: $version"
+curl -OL "$download_url"
+unzip -q -d intelbluetooth-$version IntelBluetooth.zip
+rm IntelBluetooth.zip
 
 
 
