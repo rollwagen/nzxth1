@@ -127,6 +127,15 @@ WHATEVERGREEN_DEST=$KEXTSDIR/WhateverGreen.kext
 [[ ! -d $WHATEVERGREEN_DEST ]] && cp -R $WHATEVERGREEN_SRC $KEXTSDIR/
 echo
 
+print_info "Adding kexts 'FACEPCIID*' (Needed for Ethernet: Intel I225-V 2.5 Gb)..."
+FACEPCIID_SRC=../kexts/fakepciid_intel_i225-v/FakePCIID.kext
+FACEPCIID_DEST=$KEXTSDIR/FakePCIID.kext
+FACEPCIID_I225_SRC=../kexts/fakepciid_intel_i225-v/FakePCIID_Intel_I225-V.kext
+FACEPCIID_I225_DEST=$KEXTSDIR/FakePCIID_Intel_I225-V.kext
+[[ ! -d $FACEPCIID_DEST ]] && cp -R $FACEPCIID_SRC $KEXTSDIR/
+[[ ! -d $FACEPCIID_I225_DEST ]] && cp -R $FACEPCIID_I225_SRC $KEXTSDIR/
+echo
+
 
 #
 # SSDTs as per https://dortania.github.io/Getting-Started-With-ACPI/ssdt-platform.html#desktop
@@ -141,6 +150,6 @@ echo
 #
 # config.plist
 # 
-print_info "Adding SSDTs (.aml files) to ACPI dir..."
+print_info "Copying Sample.plist to EFI/OC directory..."
 cp -v releases/OpenCore-$OCVERSION/Docs/Sample.plist $OCVERSION/EFI/OC/config.plist
 
