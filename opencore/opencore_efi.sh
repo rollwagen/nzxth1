@@ -103,6 +103,16 @@ print_info "Adding kext 'VirtualSMC' (Emulates the SMC chip found on real macs, 
 VIRTUALSMC_SRC=../kexts/virtualsmc-*/Kexts/VirtualSMC.kext
 VIRTUALSMC_DEST=$KEXTSDIR/VirtualSMC.kext
 [[ ! -d $VIRTUALSMC_DEST ]] && cp -R $VIRTUALSMC_SRC $KEXTSDIR/
+
+print_info "Adding VirtualSMC plugin 'SMCProcessor.kext' (Used for monitoring CPU temperature)..."
+SMCPROCESSOR_SRC=../kexts/virtualsmc-*/Kexts/SMCProcessor.kext
+SMCPROCESSOR_DEST=$KEXTSDIR/SMCProcessor.kext
+[[ ! -d $SMCPROCESSOR_DEST ]] && cp -R $SMCPROCESSOR_SRC $KEXTSDIR/
+
+print_info "Adding VirtualSMC plugin 'SMCSuperIO.kext' (Used for monitoring fan speed)..."
+SMCSUPERIO_SRC=../kexts/virtualsmc-*/Kexts/SMCSuperIO.kext
+SMCSUPERIO_DEST=$KEXTSDIR/SMCSuperIO.kext
+[[ ! -d $SMCSUPERIO_DEST ]] && cp -R $SMCSUPERIO_SRC $KEXTSDIR/
 echo
 
 print_info "Adding kext 'Lilu' (A kext to patch many processes, required for AppleALC, WhateverGreen, VirtualSMC and many other kexts.)..."
