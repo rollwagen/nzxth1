@@ -16,7 +16,7 @@ fi
 version=`echo $download_url | awk -F\/ '{print $8}'`
 print_info "VERSION: $version"
 curl -OL "$download_url"
-unzip -d OpenCore-$version OpenCore*.zip
+unzip -q -d OpenCore-$version OpenCore*.zip
 rm OpenCore*.zip
 
 
