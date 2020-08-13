@@ -1,0 +1,10 @@
+a=a_USB32_Gen2_TypeA_Red
+USB 3.2 Gen 2 Type-A Port (Red)
+
+d=d_USB31_Gen_1_top
+d=d_USB31_Gen_1_bottom
+USB 3.2 Gen 1 Port
+
+c=c_USB20_top HS11
+c=c_USB20_top HS12
+
