@@ -4,3 +4,4 @@ lilu-1.4.6
 radeonboost-1.6
 virtualsmc-1.1.5
 whatevergreen-1.4.1
+usbinjectall-v0.7.5

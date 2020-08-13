@@ -24,7 +24,7 @@ curl_url () {
 
 if [ "$ACTION" = "CLEANUP" ]; then
 	print_info "Cleaning up (deleting all downloaded content)."
-	rm -rf intelmausi-* lilu-* virtualsmc-* whatevergreen-* itlwm* intelbluetooth*
+	rm -rf intelmausi-* lilu-* virtualsmc-* whatevergreen-* itlwm* intelbluetooth* usbinjectall-*
 	exit
 fi
 
@@ -63,7 +63,18 @@ unzip -q -d virtualsmc-$version VirtualSMC*.zip
 rm VirtualSMC*.zip
 
 
-### additional optional kexts ###
+#
+# additional optional kexts ###
+#
+
+print_info "Downloading and unzipping latest 'USB-Inject-All' kext release..."
+download_url=`curl -s https://api.github.com/repos/Sniki/OS-X-USB-Inject-All/releases/latest |  jq '.assets[] | select(.browser_download_url | contains("Release")) | .browser_download_url' | tr -d \ \"`
+version=`echo $download_url | awk -F\/ '{print $8}'`
+print_info "Download URL: $download_url"
+print_info "VERSION: $version"
+curl -OL "$download_url"
+unzip -q -d usbinjectall-$version Release*.zip
+rm Release*.zip
 
 print_info "Getting 'itlwm' (Intel Wireless support) kext repository from github..."
 git clone https://github.com/OpenIntelWireless/itlwm.git
