@@ -21,7 +21,7 @@
 
 * b=HS06, SS08 (SS02)
 
-## Front panel (NXXT H1)
+## Front panel (NZXT H1 case; both connected to motherboard)
 * USB Type A = HS08, SS10
 
 * USB Type C
