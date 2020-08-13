@@ -13,7 +13,7 @@ d(below ethernet bottom)=HS01,SS03 (SS02)
 c=c_USB20_top HS11
 c=c_USB20_top HS12
 
-h=HS06, SS08 (SS02)
+b=HS06, SS08 (SS02)
 
 ## Front panel
 USB Type A = HS08, SS10
@@ -22,3 +22,9 @@ USB Type C
 Samsung T5 = SS01 (SS02)
 iPadPro = HS01, SS03 (SS02)
 
+
+Note:
+====
+USB type C ports can be either 9 or 10, which depends on how the hardware deals with the two possible orientations of a USB type C device/cable.
+If a USB-C uses the same SSxx in both orientations, then it has an internal switch (UsbConnector=9).
+If a USB-C uses a different SSxx in each orientation, then it has no switch (UsbConnector=10).
