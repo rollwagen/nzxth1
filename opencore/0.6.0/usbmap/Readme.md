@@ -21,7 +21,7 @@
 
 * b=HS06, SS08 (SS02)
 
-## Front panel (NXXT H1_
+## Front panel (NXXT H1)
 * USB Type A = HS08, SS10
 
 * USB Type C
@@ -29,6 +29,9 @@
 	* iPadPro = HS01, SS03 (SS02)
 
 
+### Note on USB-C types
 > USB type C ports can be either 9 or 10, which depends on how the hardware deals with the two possible orientations of a USB type C device/cable.
 > If a USB-C uses the same SSxx in both orientations, then it has an internal switch (UsbConnector=9).
 > If a USB-C uses a different SSxx in each orientation, then it has no switch (UsbConnector=10).
+
+
