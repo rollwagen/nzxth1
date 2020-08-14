@@ -7,14 +7,14 @@
 	* USB 3.2 Gen 2 Type-A Port (Red)
 	* HS03, SS05 (SS02)
 
-* d=d_USB31_Gen_1_top HS06, SS08 (SS02)
+* d=d_USB31_Gen_1_top **HS08** ~~HS06~~, **SS08** (SS02)
 	* USB 3.2 Gen 1 Port
-* e=d_USB31_Gen_1_bottom HS05, SS07 (SS02)
+* e=d_USB31_Gen_1_bottom ~~HS05~~__more likely:__**HS07**, SS07 (SS02)
 	* USB 3.2 Gen 1 Port
 
 
 * d(below ethernet top)=HS02, SS03 (SS02)
-* d(below ethernet bottom)=HS01,SS03 (SS02)
+* d(below ethernet bottom)= **HS03** ~~HS01~~,**SS03** (SS02)
 
 * c=c_USB20_top HS11
 * c=c_USB20_top HS12
