@@ -19,7 +19,7 @@
 * c=c_USB20_top HS11
 * c=c_USB20_top HS12
 
-* b=HS06, SS08 (SS02)
+* b = **HS06, SS06** ~~SS08 (SS02)~~
 
 ## Front panel (NZXT H1 case; both connected to motherboard)
 * USB Type A = HS08, SS10
