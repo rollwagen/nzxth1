@@ -24,7 +24,7 @@
 ## Front panel (NZXT H1 case; both connected to motherboard)
 * USB Type A = HS08, SS10
 
-* USB Type C
+* USB Type C **HS01/SS01**
 	* Samsung T5 = SS01 (SS02)
 	* iPadPro = HS01, SS03 (SS02)
 
