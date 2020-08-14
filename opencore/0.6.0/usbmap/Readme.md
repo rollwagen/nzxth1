@@ -3,13 +3,14 @@
 ![Motherboard Back Panel](usb_back_panel_z490i.png)
 
 ## Back panel (Gigabyte z490i Aorus Ultra)
+
 * a=a_USB32_Gen2_TypeA_Red
 	* USB 3.2 Gen 2 Type-A Port (Red)
 	* HS03, SS05 (SS02)
 
 * d=d_USB31_Gen_1_top **HS08** ~~HS06~~, **SS08** (SS02)
 	* USB 3.2 Gen 1 Port
-* e=d_USB31_Gen_1_bottom ~~HS05~~__more likely:__**HS07**, SS07 (SS02)
+* e=d_USB31_Gen_1_bottom ~~HS05~~_more likely:_ **HS07**, SS07 (SS02)
 	* USB 3.2 Gen 1 Port
 
 
@@ -26,7 +27,7 @@
 
 * USB Type C **HS01/SS01**
 	* Samsung T5 = SS01 (SS02)
-	* iPadPro = HS01, SS03 (SS02)
+	* iPadPro = HS01, ~~SS03~~ (SS02)
 
 
 ### Note on USB-C types
