@@ -16,7 +16,7 @@
 		<key>selected</key>
 		<true/>
 		<key>type</key>
-		<integer>3</integer>
+		<integer>0</integer>
 	</dict>
 	<key>HS02</key>
 	<dict>
@@ -30,7 +30,7 @@
 		<key>port</key>
 		<integer>2</integer>
 		<key>selected</key>
-		<true/>
+		<false/>
 		<key>type</key>
 		<integer>3</integer>
 	</dict>
@@ -46,7 +46,7 @@
 		<key>port</key>
 		<integer>3</integer>
 		<key>selected</key>
-		<true/>
+		<false/>
 		<key>type</key>
 		<integer>3</integer>
 	</dict>
@@ -75,7 +75,7 @@
 		<key>port</key>
 		<integer>5</integer>
 		<key>selected</key>
-		<false/>
+		<true/>
 		<key>type</key>
 		<integer>3</integer>
 	</dict>
@@ -150,9 +150,9 @@
 		<key>port</key>
 		<integer>10</integer>
 		<key>selected</key>
-		<false/>
+		<true/>
 		<key>type</key>
-		<integer>3</integer>
+		<integer>0</integer>
 	</dict>
 	<key>HS11</key>
 	<dict>
@@ -249,7 +249,7 @@
 		<key>port</key>
 		<integer>0</integer>
 		<key>selected</key>
-		<true/>
+		<false/>
 		<key>type</key>
 		<integer>3</integer>
 	</dict>
@@ -265,7 +265,7 @@
 		<key>port</key>
 		<integer>1</integer>
 		<key>selected</key>
-		<true/>
+		<false/>
 		<key>type</key>
 		<integer>3</integer>
 	</dict>
@@ -342,7 +342,7 @@
 		<key>port</key>
 		<integer>6</integer>
 		<key>selected</key>
-		<true/>
+		<false/>
 		<key>type</key>
 		<integer>3</integer>
 	</dict>
