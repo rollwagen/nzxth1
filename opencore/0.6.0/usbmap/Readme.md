@@ -24,7 +24,7 @@
 * b = **HS06, SS06** ~~SS08 (SS02)~~
 
 ## Front panel (NZXT H1 case; both connected to motherboard)
-* USB Type A = HS08, SS10
+* USB Type A = **HS10** ~~HS08~~, SS10
 
 * USB Type C **HS01/SS01**
 	* Samsung T5 = SS01 (SS02)
