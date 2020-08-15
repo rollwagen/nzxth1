@@ -1,6 +1,6 @@
 
-
 ![Motherboard Back Panel](usb_back_panel_z490i.png)
+
 
 ## Back panel (Gigabyte z490i Aorus Ultra)
 
@@ -23,7 +23,10 @@
 
 * b = **HS06, SS06** ~~SS08 (SS02)~~
 
+
+
 ## Front panel (NZXT H1 case; both connected to motherboard)
+
 * USB Type A = **HS10** ~~HS08~~, SS10
 
 * USB Type C **HS01/SS01**
@@ -31,7 +34,14 @@
 	* iPadPro = HS01, ~~SS03~~ (SS02)
 
 
+## Bluetooth / Wifi
+
+* **HS14** (bluetooth_device) disabled
+
+
+
 ### Note on USB-C types
+
 > USB type C ports can be either 9 or 10, which depends on how the hardware deals with the two possible orientations of a USB type C device/cable.
 > If a USB-C uses the same SSxx in both orientations, then it has an internal switch (UsbConnector=9).
 > If a USB-C uses a different SSxx in each orientation, then it has no switch (UsbConnector=10).
