@@ -24,7 +24,7 @@ curl_url () {
 
 if [ "$ACTION" = "CLEANUP" ]; then
 	print_info "Cleaning up (deleting all downloaded content)."
-	rm -rf intelmausi-* lilu-* virtualsmc-* whatevergreen-* itlwm* intelbluetooth* usbinjectall-*
+	rm -rf intelmausi-* lilu-* virtualsmc-* whatevergreen-* itlwm* intelbluetooth* usbinjectall-* cpufriend-*
 	exit
 fi
 
@@ -90,5 +90,12 @@ curl -OL "$download_url"
 unzip -q -d intelbluetooth-$version IntelBluetooth.zip
 rm IntelBluetooth.zip
 
+print_info "Downloading and unzipping latest 'CPUFriend' kext release..."
+download_url=`curl_url https://api.github.com/repos/acidanthera/CPUFriend/releases/latest`
+version=`echo $download_url | awk -F\/ '{print $8}'`
+print_info "VERSION: $version"
+curl -OL "$download_url"
+unzip -q -d cpufriend-$version CPUFriend-*.zip
+rm CPUFriend-**.zip
 
 
