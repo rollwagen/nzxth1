@@ -15,7 +15,7 @@ function print_info {
 if [ "$ACTION" = "CLEANUP" ]; then
         print_info "Cleaning up (i.e. deleting all downloaded content in this folder)."
 	print_info "To uninstall hackingtool execute 'brew cask uninstall hackintool'."
-	rm -rf GenSMBIOS/  MountEFI/ ProperTree/ gibMacOS/ MaciASL* OCConfigCompare* USBMap* CPUFriendFriend* IORegistryExplorer*
+	rm -rf GenSMBIOS/  MountEFI/ ProperTree/ gibMacOS/ MaciASL* OCConfigCompare* USBMap* CPUFriendFriend* IORegistryExplorer* SSDTTime*
         exit
 fi
 
@@ -43,6 +43,9 @@ git clone https://github.com/corpnewt/USBMap
 
 print_info "CPUFriendFriend..."
 git clone https://github.com/corpnewt/CPUFriendFriend.git
+
+print_info "SSDTTime..."
+https://github.com/corpnewt/SSDTTime.git
 
 
 print_info "Downloading and unzipping MaciASL tool..."
