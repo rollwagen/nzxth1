@@ -45,7 +45,7 @@ print_info "CPUFriendFriend..."
 git clone https://github.com/corpnewt/CPUFriendFriend.git
 
 print_info "SSDTTime..."
-https://github.com/corpnewt/SSDTTime.git
+git clone https://github.com/corpnewt/SSDTTime.git
 
 
 print_info "Downloading and unzipping MaciASL tool..."
