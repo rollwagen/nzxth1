@@ -9,7 +9,7 @@ OpenCore build for NZXT H1.
 ## Hardware
 - Case: NZXT H1 (black)
 - CPU: Intel i9-10900T (LGA 1200)
-- Motherboard: Gigabytel Z490I AORUS Ultra, mATX
+- Motherboard: Gigabyte Z490I AORUS Ultra, mATX
 	- WIFI: Intel AX201 Wi-Fi 6 
 	- Ethernet: Intel I225-V 2.5 GbE
 - RAM: 64GB Corsair Vengeance LPX Black (2x, 32GB, DDR4-3200, DIMM 288) 
@@ -40,7 +40,7 @@ OpenCore build for NZXT H1.
 - [x] **VMWare Fusion** (including vagrant w/ VMWare Fusion)
 
 ## Issues / Notes
-Although Bluetooth is working in general, slight lag+latency issues with Apple Magic Keyboard/Trackpad; hence, still running keyboard + trackpad via cable.
+Although Bluetooth is working in general (e.g. for audio), slight lag+latency issues with Apple Magic Keyboard/Trackpad; hence, still running keyboard + trackpad via cable.
 
 ## Details
 
@@ -59,4 +59,4 @@ Although Bluetooth is working in general, slight lag+latency issues with Apple M
 - [SchmockLord's build](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
 - [Dortania](https://github.com/dortania) _the_ OpenCore Desktop Guide
 - [OpenCore project](https://github.com/OpenCorePkg) 
-- [Gigabyte z490i ITX / 10900K / Opencore 0.5.9 / Catalina 15.5.5 / Ncase M1](https://www.tonymacx86.com/threads/gigabyte-z490i-itx-10900k-opencore-0-5-9-catalina-15-5-5-ncase-m1.299195/)
+
