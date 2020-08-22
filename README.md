@@ -1,7 +1,10 @@
 # NZXT H1
-OpenCore build for NZXT H1.
 
 ![About this mac](/doc/macos_about.png)
+
+OpenCore build for NZXT H1.
+
+**Current OpenCore Bootloader Version: 0.6.0**
 
 # Hardware
 - Case: NZXT H1 (black)
@@ -12,6 +15,12 @@ OpenCore build for NZXT H1.
 - RAM: 64GB Corsair Vengeance LPX Black (2x, 32GB, DDR4-3200, DIMM 288) 
 - GPU: Sapphire Radeon RX 570 (8GB) 
 - SSD: WD Black SN750 NAND, 500GB, M.2 2280
+- Bluetooth: TP-Link Bluetooth 4.0 Nano-USB-Adapter 
+
+# Benchmarks
+## Geekbench 5
+* Single-Core Score: 1274
+* Multi-Core Score: 9096
 
 
 # Credits / Links
