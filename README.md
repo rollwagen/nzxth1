@@ -1,7 +1,7 @@
 # NZXT H1
 OpenCore build for NZXT H1.
 
-:alarm_clock: **Work in progress.** :wrench:
+![About this mac](/doc/macos_about.png)
 
 # Hardware
 - Case: NZXT H1 (black)
