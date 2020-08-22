@@ -1,4 +1,4 @@
-# NZXT H1
+## NZXT H1
 
 ![About this mac](/doc/macos_about.png)
 
@@ -6,7 +6,7 @@ OpenCore build for NZXT H1.
 
 **Current OpenCore Bootloader Version: 0.6.0**
 
-# Hardware
+## Hardware
 - Case: NZXT H1 (black)
 - CPU: Intel i9-10900T (LGA 1200)
 - Motherboard: Gigabytel Z490I AORUS Ultra, mATX
@@ -17,10 +17,19 @@ OpenCore build for NZXT H1.
 - SSD: WD Black SN750 NAND, 500GB, M.2 2280
 - Bluetooth: TP-Link Bluetooth 4.0 Nano-USB-Adapter 
 
-# Benchmarks
-## Geekbench 5
+## Benchmarks
+### Geekbench 5
 * Single-Core Score: 1274
 * Multi-Core Score: 9096
+
+## Details
+
+### USB Mapping
+* see `README.md` in `opencore/<version>/usbmap` folder [link to current](opencore/0.6.0/usbmap/)
+
+
+### USB Mapping
+* see `README.md` in `opencore/<version>/cpufriendfriend` folder [link to current](opencore/0.6.0/cpufriendfriend/)
 
 
 # Credits / Links
