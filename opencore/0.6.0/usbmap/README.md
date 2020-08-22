@@ -1,7 +1,6 @@
 
 ![Motherboard Back Panel](usb_back_panel_z490i.png)
 
-
 ## Back panel (Gigabyte z490i Aorus Ultra)
 
 * a=a_USB32_Gen2_TypeA_Red
