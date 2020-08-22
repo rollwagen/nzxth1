@@ -14,3 +14,7 @@ Tools downloaded:
 * CPUFriendFriend
 * IORegistryExplorer
 * SSDTTime
+
+Tool(s) installed via 'brew':
+* Hackintool
+
