@@ -24,11 +24,11 @@ OpenCore build for NZXT H1.
 
 ## Details
 
-### USB Mapping
-* see `README.md` in `opencore/<version>/usbmap` folder [link to current](opencore/0.6.0/usbmap/)
+### USB Mapping 
+* see details `README.md` in `opencore/<version>/usbmap` folder [link to current](opencore/0.6.0/usbmap/)
 
 
-### USB Mapping
+### CPUFriend config
 * see `README.md` in `opencore/<version>/cpufriendfriend` folder [link to current](opencore/0.6.0/cpufriendfriend/)
 
 
