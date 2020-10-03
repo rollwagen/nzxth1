@@ -17,3 +17,9 @@ The dowloaded kexts are:
 * intelbluetooth
 * usbinjectall
 * cpufriend
+
+## Notes
+### Building 'itwlm'
+* `xcodebuild -project itlwm.xcodeproj -target itlwm -configuration Release`
+* see also - [how to compile the kext ?](https://github.com/OpenIntelWireless/itlwm/issues/158)
+
