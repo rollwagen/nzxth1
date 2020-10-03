@@ -1,11 +1,8 @@
 #!/bin/bash
 
-print_info () {
-	echo "$(tput bold)$1$(tput sgr 0)"
-}
 
 # OpenCore version
-OCVERSION=0.6.0
+OCVERSION=0.6.1
 
 # OpenCore drivers directory
 DRIVERSDIR=$OCVERSION/EFI/OC/Drivers
@@ -19,11 +16,30 @@ KEXTSDIR=$OCVERSION/EFI/OC/Kexts
 # OpenCore kext directory
 ACPISDIR=$OCVERSION/EFI/OC/ACPI
 
+
+
+print_info () {
+	echo "$(tput bold)$1$(tput sgr 0)"
+}
+print_error () {
+	echo "$(tput bold)ERROR: $1$(tput sgr 0)"
+}
+
+
 print_info "OpenCore version: $OCVERSION"
+
 print_info "Drivers directory: $DRIVERSDIR"
+[ ! -d $DRIVERSDIR ] && print_error "$DRIVERSDIR does not exists." && exit
+
 print_info "Tools directory: $TOOLSDIR"
+[ ! -d $TOOLSDIR ] && print_error "$TOOLDDIR does not exists." && exit
+
 print_info "Kext directory: $KEXTSDIR"
+[ ! -d $KEXTDIR ] && print_error "$KEXTDIR does not exists." && exit
+
 print_info "ACPI directory: $ACPISDIR"
+[ ! -d $ACPISDIR ] && print_error "$ACPISDIR does not exists." && exit
+
 echo
 
 #
@@ -141,8 +157,8 @@ echo
 # SSDTs as per https://dortania.github.io/Getting-Started-With-ACPI/ssdt-platform.html#desktop
 #
 
-print_info "Adding SSDTs (.aml files) to ACPI dir..."
-SSDT_SRC=0.5.9/ACPI
+print_info "Adding SSDTs (.aml files) to ACPI dir from previous OC build..."
+SSDT_SRC=0.6.0/ACPI
 cp -v $SSDT_SRC/*.aml $ACPISDIR/
 echo
 
