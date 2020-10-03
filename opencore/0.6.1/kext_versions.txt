@@ -1,0 +1,5 @@
+intelbluetooth-1.1.2
+intelmausi-1.0.3
+lilu-1.4.7
+virtualsmc-1.1.6
+whatevergreen-1.4.2
