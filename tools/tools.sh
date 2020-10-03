@@ -15,7 +15,7 @@ function print_info {
 if [ "$ACTION" = "CLEANUP" ]; then
         print_info "Cleaning up (i.e. deleting all downloaded content in this folder)."
 	print_info "To uninstall hackingtool execute 'brew cask uninstall hackintool'."
-	rm -rf GenSMBIOS/  MountEFI/ ProperTree/ gibMacOS/ MaciASL* OCConfigCompare* USBMap* CPUFriendFriend* IORegistryExplorer* SSDTTime*
+	rm -rf GenSMBIOS/  MountEFI/ ProperTree/ gibMacOS/ MaciASL* OCConfigCompare* USBMap* CPUFriendFriend* IORegistryExplorer* SSDTTime* iasl-*
         exit
 fi
 
@@ -47,12 +47,12 @@ git clone https://github.com/corpnewt/CPUFriendFriend.git
 print_info "SSDTTime..."
 git clone https://github.com/corpnewt/SSDTTime.git
 
-print_info "IASL tool..."
-git clone https://github.com/acidanthera/MaciASL/blob/master/Dist/iasl-stable
-
+print_info "Downloading iasl tool..."
+curl -OL https://github.com/acidanthera/MaciASL/raw/master/Dist/iasl-stable
+chmod +x iasl-stable
 
 print_info "Downloading and unzipping MaciASL tool..."
-curl -s -OL https://github.com/acidanthera/MaciASL/releases/download/1.5.7/MaciASL-1.5.7-RELEASE.zip
+curl -s -OL https://github.com/acidanthera/MaciASL/releases/download/1.5.8/MaciASL-1.5.8-RELEASE.zip
 unzip -q -d MaciASL MaciASL-*.zip
 rm MaciASL-*.zip
 echo
