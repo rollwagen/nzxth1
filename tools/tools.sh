@@ -47,6 +47,9 @@ git clone https://github.com/corpnewt/CPUFriendFriend.git
 print_info "SSDTTime..."
 git clone https://github.com/corpnewt/SSDTTime.git
 
+print_info "IASL tool..."
+git clone https://github.com/acidanthera/MaciASL/blob/master/Dist/iasl-stable
+
 
 print_info "Downloading and unzipping MaciASL tool..."
 curl -s -OL https://github.com/acidanthera/MaciASL/releases/download/1.5.7/MaciASL-1.5.7-RELEASE.zip
