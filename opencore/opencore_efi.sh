@@ -2,7 +2,7 @@
 
 
 # OpenCore version
-OCVERSION=0.6.1
+OCVERSION=0.6.3
 
 # OpenCore drivers directory
 DRIVERSDIR=$OCVERSION/EFI/OC/Drivers
