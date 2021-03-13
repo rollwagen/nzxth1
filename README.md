@@ -59,4 +59,5 @@ Although Bluetooth is working in general (e.g. for audio), slight lag+latency is
 - [SchmockLord's build](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
 - [Dortania](https://github.com/dortania) _the_ OpenCore Desktop Guide
 - [OpenCore project](https://github.com/OpenCorePkg) 
+- [Open Canopy OS Icons](https://github.com/blackosx/OpenCanopyIcons)
 
