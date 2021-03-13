@@ -64,10 +64,8 @@ rm ioreg-*.zip
 echo
 
 print_info "Installing Hackingtool via 'brew' (source available at https://github.com/headkaze/Hackintool)..."
-hackintool_installed=`brew cask list --json hackintool | jq '.[]|.token'`
-if [ $hackintool_installed = "\"hackintool\"" ]; then
-	print_info "Hackintool already installed."
+if ! brew info --cask hackintool &>/dev/null; then
+	brew install --cask hackintool
 else
-	brew cask install hackintool
+	print_info "Hackintool already installed."
 fi
-
