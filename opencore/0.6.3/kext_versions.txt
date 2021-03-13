@@ -1,8 +1,0 @@
-cpufriend-1.2.2
-intelbluetooth-1.1.2
-intelmausi-1.0.4
-lilu-1.4.9
-radeonboost-1.6
-usbinjectall-v0.7.5
-virtualsmc-1.1.8
-whatevergreen-1.4.4

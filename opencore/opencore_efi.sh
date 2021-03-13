@@ -2,7 +2,7 @@
 
 
 # OpenCore version
-OCVERSION=0.6.3
+OCVERSION=0.6.7
 
 # OpenCore drivers directory
 DRIVERSDIR=$OCVERSION/EFI/OC/Drivers
@@ -158,7 +158,7 @@ echo
 #
 
 print_info "Adding SSDTs (.aml files) to ACPI dir from previous OC build..."
-SSDT_SRC=0.6.0/ACPI
+SSDT_SRC=0.6.1/EFI/OC/ACPI
 cp -v $SSDT_SRC/*.aml $ACPISDIR/
 echo
 
