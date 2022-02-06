@@ -1,0 +1,5 @@
+lilu-1.5.8
+virtualsmc-1.2.8
+whatevergreen-1.5.5
+appleALC-1.5.7
+itlwm-2.1.0
